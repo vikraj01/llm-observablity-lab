@@ -1,3 +1,12 @@
+"""The agent's three tools.
+
+- calculator: safe arithmetic evaluator (no eval()).
+- get_weather: fake weather service, deliberately flaky (~20% failures)
+  so we have real errors to look at in the observability tools later.
+- search_docs: tiny RAG over the markdown files in docs/, using a real
+  embedding model and an in-memory vector store.
+"""
+
 import ast
 import operator
 import random
@@ -6,6 +15,7 @@ from pathlib import Path
 from langchain_core.tools import tool
 from langchain_core.vectorstores import InMemoryVectorStore
 
+from ..obs_logging import logged_tool
 from .llm import get_embeddings
 
 # --------------------------------------------------------------------------
@@ -39,6 +49,7 @@ def _safe_eval(node: ast.AST) -> float:
 
 
 @tool
+@logged_tool
 def calculator(expression: str) -> str:
     """Evaluate a plain arithmetic expression and return the result.
 
@@ -60,6 +71,7 @@ _CONDITIONS = ["sunny", "cloudy", "light rain", "humid", "windy"]
 
 
 @tool
+@logged_tool
 def get_weather(city: str) -> str:
     """Get the current weather for a city: temperature in Celsius and conditions.
 
@@ -100,6 +112,7 @@ def _get_vector_store() -> InMemoryVectorStore:
 
 
 @tool
+@logged_tool
 def search_docs(query: str) -> str:
     """Search the local engineering notes (markdown docs) and return the most
     relevant excerpts.

@@ -32,6 +32,8 @@ The 20% failure is the interesting part. It is what makes the error screens belo
 | [03-features.md](03-features.md) | Dashboards, and what each tool has that the other does not |
 | [04-cost.md](04-cost.md) | Pricing for both, and measured CPU/RAM/disk for self-hosted Langfuse |
 | [05-scale.md](05-scale.md) | How many traces self-hosted Langfuse handles, load tested, versus LangSmith's limits |
+| **[06-feature-matrix.md](06-feature-matrix.md)** | **Full feature comparison including Insights, Engine and Automations. Start here** |
+| **[07-cost-model.md](07-cost-model.md)** | **Worked cost model at 300-400 traces/day: seats, traces, Engine, Insights, self-hosted infra** |
 
 PDF versions of all of the above are in [pdf/](pdf/), including a single combined
 [langfuse-vs-langsmith-FULL.pdf](pdf/langfuse-vs-langsmith-FULL.pdf) with everything in one file.

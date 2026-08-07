@@ -230,4 +230,4 @@ docker exec langfuse-clickhouse-1 clickhouse-client \
 
 ---
 
-[Index](README.md) · [Tracing](01-tracing.md) · [Evaluation](02-evaluation.md) · [Features](03-features.md) · [Cost](04-cost.md) · [Scale](05-scale.md)
+[Index](README.md) · [Tracing](01-tracing.md) · [Evaluation](02-evaluation.md) · [Features](03-features.md) · [Cost](04-cost.md) · [Scale](05-scale.md) · [Feature matrix](06-feature-matrix.md) · [Cost model](07-cost-model.md)

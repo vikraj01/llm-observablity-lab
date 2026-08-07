@@ -92,7 +92,7 @@ Note the shape of that. Almost all of it is **images, not data**. `langfuse-work
 
 ### Measured versus recommended
 
-Langfuse officially recommends **4 cores, 16 GiB RAM, and 100 GiB storage** (a `t3.xlarge` class VM).
+Langfuse officially recommends **4 cores, 16 GiB RAM, and 100 GiB storage**.
 
 The gap is large: 2.16 GiB measured against 16 GiB recommended. Both numbers are honest. The recommendation covers production ingest, where ClickHouse is absorbing continuous writes rather than sitting idle. For a lab or a small team, the real figure is closer to what is measured here.
 
@@ -120,7 +120,10 @@ Port `5432` is the one that actually bit. Any other local Postgres stops the who
 
 The licence is free. The machine is not.
 
-A 4 core / 16 GiB VM plus 100 GiB of storage is the floor, and at typical cloud on-demand rates that lands somewhere around **$100 to $150 a month**. That figure is an estimate from published instance pricing, not something measured here.
+A 4 core / 16 GiB VM plus 100 GiB of storage is the floor. Priced against your own
+infrastructure rates that typically lands somewhere around **$100 to $150 a month**.
+That range is indicative only. Substitute your actual internal or provider rate before
+quoting it to anyone.
 
 Compare that against Langfuse Cloud Core at **$29 a month** for 100k units, plus **$8 per additional 100k**:
 

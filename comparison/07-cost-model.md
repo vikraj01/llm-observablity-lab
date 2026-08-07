@@ -112,7 +112,7 @@ Treated as an independent infrastructure cost, since that is what it is.
 
 | Line | Monthly | Basis |
 |---|---|---|
-| Compute: 1 VM, 4 vCPU / 16 GiB | **~$120** | Langfuse's recommended sizing, at published on-demand rates |
+| Compute: 1 VM, 4 vCPU / 16 GiB | **~$120** | Langfuse's recommended sizing. Replace with your own infrastructure rate |
 | Storage: 100 GB block | **~$10** | Lasts decades at this volume |
 | Backups and snapshots | ~$5 | |
 | Langfuse licence | **$0** | MIT. All core features |
@@ -125,8 +125,9 @@ stack idles at **2.16 GiB** and peaks at **3.2 GiB** under a 395 traces/second l
 4 vCPU / 16 GiB box is generous, and the recommendation exists for production ingest,
 not for this.
 
-Reserved instances or a committed-use discount typically cut the compute line by 30 to
-60 percent. A small always-on VM from a budget provider can be under $40.
+Committed or long-term capacity typically cuts the compute line by 30 to 60 percent,
+and an existing internal host or shared cluster can absorb it at close to zero marginal
+cost. This is the line most worth replacing with your own number.
 
 ---
 
@@ -269,8 +270,8 @@ Being explicit about which numbers are hard and which are estimates.
   100k units, unlimited seats on paid plans, MIT licence for self-hosted
 
 **Estimated, and the weakest numbers here:**
-- ~$120/month for a 4 vCPU / 16 GiB VM, from published on-demand list pricing. Not
-  measured. Reserved pricing cuts this substantially
+- ~$120/month for a 4 vCPU / 16 GiB VM. Indicative only, not measured, and not tied to
+  any particular provider. Substitute your own infrastructure rate
 - 4 to 8 hours/month of operations effort for a single-node deployment
 - 30 days per month for the daily-to-monthly conversion
 

@@ -1,3 +1,14 @@
+# secrets
 .env
+
+# python
 .venv/
 __pycache__/
+*.pyc
+
+# the Langfuse server is cloned in for self-hosting, not part of this repo
+langfuse/
+
+# shareable zip built by scripts/make_zip.sh
+dist/
+*.zip
